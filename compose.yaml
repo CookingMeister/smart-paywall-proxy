@@ -23,7 +23,7 @@ services:
 
   # Same versions the cluster pins. Note the tag styles differ upstream.
   ladder13ft:
-    image: ghcr.io/wasi-master/13ft:0.5.0
+    image: ghcr.io/wasi-master/13ft:1.3.0
 
   ladder-go:
     image: ghcr.io/everywall/ladder:v0.0.23
