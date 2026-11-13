@@ -1,12 +1,12 @@
 # Dependencies are installed in a throwaway stage so the runtime image carries
 # no npm, yarn or corepack: the app never uses them, and they account for most
 # of the CVEs reported against the stock node image.
-FROM node:24-alpine AS deps
+FROM node:26-alpine AS deps
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev
 
-FROM node:24-alpine
+FROM node:26-alpine
 
 # tini replaces compose's `init: true`: node as PID 1 ignores SIGTERM, so pod
 # shutdowns would otherwise wait out the full grace period and then be killed.

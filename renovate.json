@@ -16,11 +16,15 @@
       "minimumReleaseAge": "3 days"
     },
     {
-      "description": "Keep the Docker base image on the current Node LTS line; majors need a manual test.",
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["node"],
+      "description": "Node moves as one PR across the Docker base image, CI and .nvmrc, so the tests always run on the runtime that ships.",
+      "matchDepNames": ["node"],
+      "groupName": "node"
+    },
+    {
+      "description": "A new Node major needs a manual test; never automerge it.",
+      "matchDepNames": ["node"],
       "matchUpdateTypes": ["major"],
-      "enabled": false
+      "automerge": false
     }
   ]
 }
