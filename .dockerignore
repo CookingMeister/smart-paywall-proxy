@@ -1,8 +1,11 @@
 node_modules
 npm-debug.log
 .git
+.github
 .gitignore
+.dockerignore
 Dockerfile
 compose.yaml
-docker-compose.yml
+README.md
+test
 .env

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticCommits"
+  ],
+  "timezone": "America/Halifax",
+  "schedule": ["before 6am on monday"],
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "description": "Patch updates are low risk; the test job must pass before automerge.",
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "minimumReleaseAge": "3 days"
+    },
+    {
+      "description": "Keep the Docker base image on the current Node LTS line; majors need a manual test.",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["node"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    }
+  ]
+}

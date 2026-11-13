@@ -1,13 +1,18 @@
 {
-  "name": "smart-proxy",
-  "version": "1.0.0",
-  "main": "app.js",
+  "name": "smart-paywall-proxy",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Paywall-bypass front end over 13ft and ladder, with a Redis cache and an archive.today fallback",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/server.js",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "dependencies": {
     "express": "^4.21.2",
-    "node-fetch": "^2.7.0",
     "redis": "^4.7.0"
   }
 }
