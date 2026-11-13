@@ -1,0 +1,13 @@
+{
+  "name": "smart-proxy",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "node-fetch": "^2.7.0",
+    "redis": "^4.7.0"
+  }
+}
