@@ -5,6 +5,7 @@
     ":dependencyDashboard",
     ":semanticCommits"
   ],
+  "dependencyDashboardAutoclose": true,
   "timezone": "America/Halifax",
   "schedule": ["before 6am on monday"],
   "labels": ["dependencies"],
